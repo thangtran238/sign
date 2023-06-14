@@ -20,6 +20,10 @@ export default function ProductPage() {
       <div className="d-flex justify-content-between p-5 align-items-center">
         <h2 className="text-primary">Tiki</h2>
         <Link className="btn btn-dark" to={"/admin"}>Admin Page</Link>
+        <div className="btn-group" role="group">
+        <Link className="btn btn-primary" to={"/signup"}>Sign Up</Link>
+          <Link className="btn btn-outline-primary" to={"/signin"}>Sign In</Link>
+        </div>
       </div>
       <div className="container py-5">
         {records.map((record) => (

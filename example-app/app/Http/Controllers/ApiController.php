@@ -24,7 +24,7 @@ class ApiController extends Controller
             'title' => $request->input('title'),
             'rate' => $request->input('rate'),
             'sold' => $request->input('sold'),
-            'image' => $request->input('img'),
+            'image' => $request->input('image'),
             'unit_price' => $request->input('unit_price'),
             'promo_price' => $request->input('promo_price'),
             'des' => $request->input('des')
@@ -57,4 +57,6 @@ class ApiController extends Controller
     {
         //
     }
+
+    
 }

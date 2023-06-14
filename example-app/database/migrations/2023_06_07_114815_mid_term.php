@@ -22,6 +22,13 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->timestamps();
         });
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('full_name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -29,6 +36,7 @@ return new class extends Migration
      */
     public function down()
     {
-
+        Schema::dropIfExists('products');
+        Schema::dropIfExists('users');
     }
 };

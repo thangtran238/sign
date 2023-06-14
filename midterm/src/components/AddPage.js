@@ -42,7 +42,7 @@ const AddPage = () => {
         .post("http://localhost:8000/api/add", form)
         .then((res) => {
           toast.success("Thêm sản phẩm thành công");
-          window.location.href = "/";
+          window.location.href = "/admin";
         })
         .catch((err) => {
           console.log(err);
@@ -104,7 +104,7 @@ const AddPage = () => {
             <div className="form-group">
               <label>Image:</label>
               <input
-                type="file"
+                type="text"
                 name="image"
                 value={formData.image}
                 onChange={handleChange}

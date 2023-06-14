@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('get-product',[ApiController::class,'index']);
 Route::post('add',[ApiController::class,'store']);
+Route::get('users',[UserController::class,'index']);
+Route::post('signup',[UserController::class,'store']);
+Route::post('signin',[UserController::class,'check']);
